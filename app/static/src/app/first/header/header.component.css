@@ -1,0 +1,19 @@
+.header{
+  padding: 2.5%;
+  background-color: rgb(34, 54, 86);
+}
+.head{
+  color: white;
+  font-size: 42px;
+}
+.right-header{
+  margin-top: 2%;
+}
+h5{
+  color: white;
+}
+.right-header-inner{
+  width: auto;
+  float: right;
+  margin-right: 5%;
+}
