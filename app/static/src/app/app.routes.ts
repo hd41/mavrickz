@@ -20,7 +20,7 @@ const routes: Routes = [
         { path: 'register', component: RegisterComponent },
         { path: 'login', component: LoginComponent },
       ],
-    }
+    },
 ]
 
 export const APP_ROUTES_PROVIDER = RouterModule.forRoot(routes);
