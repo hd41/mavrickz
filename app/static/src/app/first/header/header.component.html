@@ -8,7 +8,9 @@
     <div class="row right-header-inner">
       <a href="#About-Us"><h5>About Us</h5></a>&emsp;
       <a href="#Contact-Us"><h5>Contact Us</h5></a>&emsp;
-      <a routerLink="auth"><h5>Himanshu</h5></a>
+
+      <a *ngIf="!session_active; else content" routerLink="auth"><h5>Login/Register</h5></a>
+      <ng-template #content><a (click)="signOut()"><h5>Sign Out</h5></a></ng-template>
     </div>
   </div>
 </div>

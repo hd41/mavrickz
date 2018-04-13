@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import 'hammerjs';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
- import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { HeaderComponent } from './first/header/header.component';
 import { FooterComponent } from './first/footer/footer.component';
@@ -16,6 +16,7 @@ import { AuthComponent } from './auth/auth.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginService } from './services/login.service';
+import { UploadComponent } from './uploadItem/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginService } from './services/login.service';
     FirstComponent,
     AuthComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

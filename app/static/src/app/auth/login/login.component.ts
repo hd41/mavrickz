@@ -21,7 +21,16 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.user).then((user) => {
       //here user come as a JSON response
       if(user["status"]=="success"){
-        this.router.navigate(['/']);
+        sessionStorage.setItem("userName", user["name"]);
+        var tmp = user["name"];
+        var cur = "Himanshu ";
+        if(tmp==cur){
+          console.log("in");
+          this.router.navigate(['/admin']);
+        }
+        else{
+            this.router.navigate(['/']);
+        }
       }
       else{
         this.login_msg=true;
