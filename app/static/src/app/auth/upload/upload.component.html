@@ -2,8 +2,8 @@
   <div class="uploadItem">
     <h1>Upload new File</h1><br>
       <form method="post" enctype="multipart/form-data">
-        <label for="Name_of_item"><input type="text" name="itemName" placeholder="Item Name" size="80" id="itemName"></label><br>
-        <label for="description of item"><textarea type="text" name="description" rows="4" cols="82" id="description" placeholder="Item description here"></textarea></label><br>
+        <label for="Name_of_item"><input type="text" name="itemName" placeholder="Car Name" size="80" id="itemName"></label><br>
+        <label for="description of item"><textarea type="text" name="description" rows="4" cols="82" id="description" placeholder="Car description here"></textarea></label><br>
 
         <div class="cat-par row">
           <div class="col-md-6">
@@ -14,7 +14,8 @@
           <div class="col-md-6">
             <label for="Parent_Season">
               <h5>Select Parent Node:</h5>
-              <select id="parent" (onchange)="fill_field()">
+              <select name="parent" [(ngModel)]="data1" (ngModelChange)="fill_field()" id="parent">
+                <!-- [ngModel]="data" ngModelChange-->
                 <!-- implementing for loop here -->
                 <option value="NULL">---Choose an option------</option>
                 <option *ngFor="let dic of par_seq_list;" value="{{dic[0]}}">{{dic[0]}}</option>
@@ -31,7 +32,7 @@
             </label><br>
           </div>
           <div class="col-md-6">
-            <label for="Author"><input type="text" name="author" value="" placeholder="Name of the author here" size="80" id="author"></label> <br>
+            <label for="Author"><input type="text" name="author" value="" placeholder="Name of the designer here" size="80" id="author"></label> <br>
           </div>
         </div>
 

@@ -20,17 +20,19 @@ export class UploadComponent implements OnInit {
   msg: string;
 
   ngOnInit() {
+    this.call_initially();
+  }
+
+  call_initially(){
     console.log("hello: ");
     this.loginService.get_data_for_upload().then((user) => {
       console.log(user["data"]+" "+user['max_ser']);
-      // for (var i=0;i<user["data"].length;i++){
-      //   var tmp=[];
-      //   tmp.push(user["data"][i]);
-      //   tmp.push(user["max_ser"][i]);
-      //   this.par_seq_list.push(tmp);
-      // }
-      var tmp = ["volvo","2"];
-      this.par_seq_list.push(tmp);
+      for (var i=0;i<user["data"].length;i++){
+        var tmp=[];
+        tmp.push(user["data"][i]);
+        tmp.push(user["max_ser"][i]);
+        this.par_seq_list.push(tmp);
+      }
       console.log(this.par_seq_list);
     })
     .catch((err) => {
@@ -39,9 +41,11 @@ export class UploadComponent implements OnInit {
   }
 
   fill_field(){
+    console.log("kalsjda");
     let inputE5: HTMLInputElement = this.el.nativeElement.querySelector('#parent');
+    console.log(inputE5.value);
     let idx =0;
-    for(let i=0;i<this.par_seq_list.length;i++){
+    for(var i=0;i<this.par_seq_list.length;i++){
       if(this.par_seq_list[i][0] == inputE5.value) {
         idx = i;
         console.log(i);
