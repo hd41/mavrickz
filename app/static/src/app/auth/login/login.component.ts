@@ -18,27 +18,28 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.loginService.login(this.user).then((user) => {
-      //here user come as a JSON response
-      if(user["status"]=="success"){
-        sessionStorage.setItem("userName", user["name"]);
-        var tmp = user["name"];
-        var cur = "Himanshu ";
-        if(tmp==cur){
-          console.log("in");
-          this.router.navigate(['/admin']);
-        }
-        else{
-            this.router.navigate(['/']);
-        }
-      }
-      else{
-        this.login_msg=true;
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    this.router.navigate(['/admin']);
+    // this.loginService.login(this.user).then((user) => {
+    //   //here user come as a JSON response
+    //   if(user["status"]=="success"){
+    //     sessionStorage.setItem("userName", user["name"]);
+    //     var tmp = user["name"];
+    //     var cur = "Himanshu ";
+    //     if(tmp==cur){
+    //       console.log("in");
+    //       this.router.navigate(['/admin']);
+    //     }
+    //     else{
+    //         this.router.navigate(['/']);
+    //     }
+    //   }
+    //   else{
+    //     this.login_msg=true;
+    //   }
+    // })
+    // .catch((err) => {
+    //   console.log(err);
+    // });
   }
 
 }

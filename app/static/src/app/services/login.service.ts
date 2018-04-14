@@ -12,6 +12,11 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
+  get_data_for_upload(): Promise<any> {
+    let url: string = `${this.BASE_URL}/get_data_for_upload`;
+    return this.http.get(url, {headers: this.headers}).toPromise();
+  }
+
   login(user: User): Promise<any> {
     let url: string = `${this.BASE_URL}/login`;
     //this function is called by login component where user is defined as a class having two attribute (email, password) and request is given along with JSON data

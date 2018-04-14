@@ -8,10 +8,9 @@ import os
 from flask import Flask, request, redirect, url_for
 from werkzeug.utils import secure_filename
 
+app = Flask(__name__)
 UPLOAD_FOLDER = '/uploads'
-ALLOWED_EXTENSIONS = set(['mp4', 'jpg', 'jpeg'])
-
-default.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+ALLOWED_EXTENSIONS = set(['mp4'])
 
 connection = pymongo.MongoClient('mongodb://jarvis:tiger@ds213229.mlab.com:13229/jarvis1', 123456)
 mongo = connection['jarvis1']
@@ -30,24 +29,56 @@ def home1():
     hell_msg={'a':'asd','b':'qwe'}
     return json.dumps(hell_msg) #we can use jsonify here as well
 
-@default.route('/upload',methods =['POST'])
+@default.route('/get_data_for_upload')
+def get_data():
+    items= mongo.items
+    u = items.distinct('parent')
+    tmp= []
+    for i in u:
+        tmp2=[]
+        for ind in items.find({'parent':i}):
+            tmp2.append(ind['sequence'])
+        tmp.append(max(tmp2))
+    responseObject={
+        "data":u,
+        "max_ser":tmp
+    }
+    return jsonify(responseObject)
+
+@default.route('/upload', methods = ['POST'])
 def upload():
     if request.method == 'POST':
-        # check if the post request has the file part
-        if 'file' not in request.files:
-            return redirect(request.url)   #here we have to respond to file not found in post req
-        file = request.files['file']
-        # if user does not select file, browser also
-        # submit a empty part without filename
+        if 'item_raw' not in request.files:
+            return redirect(request.url)
+
+        file = request.files['item_raw']
+        name = request.form['name']
+        des = request.form['description']
+        cat = request.form['category']
+        par = request.form['parent']
+        seq = request.form['seq']
+        aut = request.form['author']
+
         if file.filename == '':
             flash('No selected file')
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
+            return "no file selected"
+        if file:
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file',
-                                    filename=filename))
-
+            env_add = "D:\Cultures12\uploads"
+            url = os.path.join(env_add,filename)
+            file.save(os.path.join(env_add,filename))
+            # inserting into mongo
+            try:
+                item= mongo.items
+                item.insert({'name':name,'description':des,'category':cat,'parent':par,'sequence':seq,'author':aut,'url':url})
+                print "mongo document inserted"
+                responseObject = {
+                        'status': 'success',
+                        'message': 'Successfully entered.'
+                    }
+            except Exception as e:
+                print "Exception: "+str(e)
+        return jsonify(responseObject)
 
 @default.route('/login', methods = ['POST'])
 def login():

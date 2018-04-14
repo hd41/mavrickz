@@ -6,7 +6,7 @@ import { FirstComponent } from './first/first.component';
 import { AuthComponent } from './auth/auth.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
-import { UploadComponent } from './uploadItem/upload/upload.component';
+import { UploadComponent } from './auth/upload/upload.component';
 
 const routes: Routes = [
     {
