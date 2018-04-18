@@ -17,6 +17,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginService } from './services/login.service';
 import { UploadComponent } from './auth/upload/upload.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UploadComponent } from './auth/upload/upload.component';
     AuthComponent,
     RegisterComponent,
     LoginComponent,
-    UploadComponent
+    UploadComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

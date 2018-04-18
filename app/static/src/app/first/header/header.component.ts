@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   signOut(){
     sessionStorage.clear();
-    this.router.navigate(['/bye']);
+    this.router.navigate(['/signOut']);
   }
 
 }
