@@ -18,6 +18,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { LoginService } from './services/login.service';
 import { UploadComponent } from './auth/upload/upload.component';
 import { LogoutComponent } from './auth/logout/logout.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LogoutComponent } from './auth/logout/logout.component';
     RegisterComponent,
     LoginComponent,
     UploadComponent,
-    LogoutComponent
+    LogoutComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { UploadComponent } from './auth/upload/upload.component';
 import { LogoutComponent } from './auth/logout/logout.component'
+import { LandingComponent } from './landing/landing.component'
 
 const routes: Routes = [
     {
@@ -28,8 +29,21 @@ const routes: Routes = [
       ],
     },
     {
+      path: 'home/auth',
+      component: AuthComponent,
+      children: [
+        { path: '', redirectTo: 'login', pathMatch: 'full' },
+        { path: 'register', component: RegisterComponent },
+        { path: 'login', component: LoginComponent },
+      ],
+    },
+    {
         path: 'admin',
         component: UploadComponent,
+    },
+    {
+        path: 'landing',
+        component: LandingComponent,
     },
     {
         path: 'signOut',
