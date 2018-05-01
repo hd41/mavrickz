@@ -1,1 +1,1 @@
-web: gunicorn manage:runserver --timeout 10
+web: gunicorn manage:app --timeout 10
