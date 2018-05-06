@@ -21,7 +21,6 @@ CORS(default)
 
 @default.route('/')
 def home():
-    # return "Its working!!"
     return default.send_static_file('index.html')
 
 @default.route('/home')
