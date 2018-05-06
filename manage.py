@@ -6,4 +6,6 @@ app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 manager = Manager(app)
 
 if __name__ == '__main__':
-	manager.run()
+	port = int(os.environ.get('PORT',5000))
+	app.run(port=port)
+	# manager.run()
