@@ -1,0 +1,38 @@
+<html>
+    <head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='vendorPage.css') }}">
+    </head>
+    <body>
+        <div class="header">
+			<div class="banner">
+	    	    <h1>Welcome to UDS service.</h1>
+	    	    <center><h3>Fill ur cart wid loads of happiness.</h3></center>
+	    	</div>
+        </div>
+
+        <div class="container" id="container" style="padding: 3%;">
+            <form action="/update/{{id1}}" method="POST">
+                <h1>Update value</h1>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src= {{ url_for('static', filename= 'items/'+row[2]) }} alt="menu-item" style="max-width:100%; max-height:100%;">
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="text" name="itemName" value="{{row[0]}}"><br><br>
+                        <input type="text" name="itemCost" value="{{row[1]}}"><br>
+                        <button type="submit" class="btn btn-primary">Update </button>
+                    </div>
+                </div>                
+            </form>
+        </div>  
+
+    </body>
+</html>

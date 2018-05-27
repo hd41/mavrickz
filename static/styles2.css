@@ -1,0 +1,116 @@
+* {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+body{
+	margin: 0 auto;
+	background-color: #551422; /*234234*/
+}
+.header{
+	padding: 18px;
+	background-image: url("images/top-banner.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.header h3{
+	margin-top: -2%;
+}
+.banner{
+	width: 550px;
+	margin-left: 8%;
+}
+
+.container{
+	padding: 0% 0% 0% 0%;
+	width: 80%;
+	margin-left: 10%;
+	background-color: #f3f3f3;
+	background-size: 100%;
+}
+.slider{
+	height: 80%;
+}
+.h-slider{
+	padding: 3%;
+}
+.h-slider h2{
+	color: #551422;
+}
+.aiwayi{
+    padding: 4%;
+    background-color: #c5c5c5;
+    align-items: center;
+}
+.info{
+	margin-top: 0%;
+	background-color: #2c2c2c;
+	color: white;
+	padding: 6%;
+}
+
+.form-style-8{
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 600px;
+    margin: 50px auto;
+    color: black;
+    /*box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);*/
+}
+.form-style-8 input[type="text"],
+.form-style-8 input[type="email"],
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Helvetica, sans-serif;
+    height: 85px;
+}
+.form-style-8 input[type="button"],
+.form-style-8 input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.form-style-8 input[type="button"]:hover,
+.form-style-8 input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	color: #551422;
+	line-height: 52px;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 18px;
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	line-height: 24px;
+}
+
+.footer{
+	padding: 3px;
+	background-color: #c5c5c5; /*#eecbad*/
+	color: #551422;
+}

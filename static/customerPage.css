@@ -1,0 +1,75 @@
+* {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+body{
+	margin: 0 auto;
+	background-color: #e2d2d5; /*234234*/
+}
+.header{
+	padding: 18px;
+	background-image: url("images/top-banner.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.header h3{
+	margin-top: -2%;
+}
+.banner{
+	width: 550px;
+	margin-left: 8%;
+}
+.navigation-tab{
+    font-size: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding-right: 12%;
+}
+li{
+    float: right;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.container{
+    margin-top: 3%;
+    background-color: #551422;
+    width: 80%;
+    min-height: 70%;
+    margin-left: 10%;
+    padding: 1% 2% 0% 2%;
+}
+.items{
+    padding: 2%;
+}
+.single{
+    padding: 3%;
+    width: 31%;  /*31%*/
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.vendor{
+    height: 40px;
+    min-width: 120px;
+}
+.vendorName{
+    margin-left: 15%;
+    width: 100%;
+    min-height: 10%;
+    background-color: aqua;
+}

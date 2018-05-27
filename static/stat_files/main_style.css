@@ -1,0 +1,72 @@
+.header{
+    padding: 1.5%;
+    background-color: rgb(34, 54, 86);
+    color: white;
+  }
+  .head{
+    color: white;
+    font-size: 42px;
+  }
+  .right-header{
+    margin-top: 2%;
+  }
+  h5{
+    color: white;
+  }
+  .right-header-inner{
+    width: auto;
+    float: right;
+    margin-right: 5%;
+  }
+  
+  .matter{
+    margin-left: 8%;
+    width: 84%;
+    background-color: rgb(133, 127, 255);
+    color: white;
+    padding-bottom: 4%;
+  }
+  .carousel-inner img {
+        width: 100%;
+        height: 100%;
+  }
+  .carousel-inner{
+    height: 80%;
+  }
+  .bottom-content{
+    padding: 4%;
+  }
+  .About-Us{
+    text-align: center;
+    background-color: rgba(55, 45, 45, 0.5);
+    padding: 4%;
+  }
+  .Contact-Us{
+    padding: 4%;
+    margin-bottom: -2%;
+  }
+  .Contact-left{
+    border-right: thick solid rgba(55, 45, 45, 0.5);
+    vertical-align: middle;
+  }
+  .Social{
+    margin-top: 4%;
+    text-align:center;
+    padding: 4%;
+    background-color: rgba(55, 45, 45, 0.5);
+    margin-bottom: 0%;
+  }
+  .social-imgs{
+    margin-top: 2%;
+  }
+  
+
+  .footer{
+    text-align: center;
+    background-color: rgb(34, 54, 86);
+    padding: 1%;
+    width: 102%;
+    margin-left: -1%;
+    color: white;
+  }
+  

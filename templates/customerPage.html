@@ -1,0 +1,78 @@
+<html>
+    <head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='customerPage.css') }}">
+        <script src="{{url_for('static',filename='customerPage.js')}}"></script>
+    </head>
+    <body>
+        <div class="header">
+			<div class="banner">
+	    	    <h1>Welcome to UDS service.</h1>
+	    	    <center><h3>Fill ur cart wid loads of happiness.</h3></center>
+            </div>
+        </div>
+        <div class="navigation-tab">
+            <ul class="nav">
+                <li class="active"><a href="#">Cart</a></li>
+                <li><a onclick="profile">Himanshu Dhanwant</a></li>
+              </ul>
+        </div>
+
+    
+    <div class="vendorName">
+        <form action="/orderByMerchant">
+        <!-- Implement loop here -->
+            <div class="col-md-4" style="padding:2%; margin:1%;">
+                <button class="btn btn-primary vendor" name="Rakesh">Rakesh</button>
+            </div>
+        <!-- endloop -->
+        </form>
+    </div>
+    
+
+    <form action="/order" name="orderForm" method="post" onsubmit="return check()">
+        <input type="hidden" name="order" id="allItem" value="">
+        <div class="container" id="container">
+            <div class="items">
+                <!-- implement for loop here -->
+                <div class="col-md-4 single" style="padding:2%; background-color:azure; margin:1%;">
+                    <img src= {{ url_for('static', filename= 'images/plus.jpg') }} alt="menu-item" style="max-width:100%; max-height:100%;">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4 id='name1'>Manchurian</h4> 
+                        </div>
+                        <div class="col-md-5" style="text-align:right;">
+                            <h4><span id='cost1'>60</span> </h4>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn" onclick="min(1)">-</button>
+                            <span id="qty1" style="float:none;">0</span>
+                            <button class="btn" onclick="max(1)">+</button>
+                        </div>
+                        <div class="col-md-6" >
+                            <button class="btn btn-primary" style="float:right;" onclick="addItem(1)">
+                                Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- endfor loop -->
+            </div>
+            <center>
+            <button type="submit" class="btn btn-warning" style="float:none;margin-top:4%; margin-left:45%; margin-bottom:4%" onclick="addFlag()">Proceed to checkout</button>            
+            </center>
+        </div>  
+
+    </form>
+
+    </body>
+</html>

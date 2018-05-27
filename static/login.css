@@ -1,0 +1,98 @@
+body{
+  margin: 0 auto;
+  background-color: #551422;
+}
+h1{
+  margin-top: 4%;
+}
+.flash{
+  color: white;
+}
+.header{
+  padding: 1%;
+  background-image: url("images/top-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.body{
+  background-image: url("images/sns-index.jpg");
+  width: 80%;
+  padding: 3%;
+  margin: 0 auto;
+}
+.options{
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  top: 70%;
+  color: red;
+  font-size: 100%;
+}
+.optButton{
+  padding: 10px;
+}
+
+/*for signUp*/
+.signUpForm{
+  display: block;
+  box-sizing: border-box;
+  background: #fff;
+  transition: all 0.3s ease-out;
+  background: rgba(255, 255, 255, 0.3 );
+  border-radius: 8px;
+
+  padding: 14px;
+  text-align: center;
+  margin: 0 auto;
+  width: 340px;
+  height: auto;
+
+  top: 25%;
+  position: relative;
+  font-size: 18px;
+  font-family: cursive;
+}
+.login{
+  display: block;
+  box-sizing: border-box;
+  background: #fff;
+  transition: all 0.3s ease-out;
+  background: rgba(255, 255, 255, 0.3 );
+  border-radius: 8px;
+
+  text-align: center;
+  padding: 14px;
+  margin: 0 auto;
+  width: 320px;
+  height: auto;
+  /*color: #990000;*/
+  margin-top: 10%;
+  position: relative;
+  font-size: 18px;
+  font-family: cursive;
+}
+.semi-transparent-button {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 8px;
+  width: auto;
+  min-width: 200px;
+  background: #fff; /* fallback color for old browsers */background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color: #990000;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+
+/*for footer*/
+.footer{
+  text-align: center;
+  background-color: #e2e2e2;
+  width: 100%;
+  padding: 0.4%;
+  color: #551422;
+}
