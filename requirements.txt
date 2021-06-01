@@ -75,7 +75,7 @@ SQLAlchemy==0.9.4
 thespian==3.5.2
 twilio==6.5.2
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==15.2.0
 virtualenv-clone==0.3.0
 visitor==0.1.3
